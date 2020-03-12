@@ -1,0 +1,29 @@
+#user:
+#  name: 张三
+#  id: 15
+#  dog:
+#    name: 旺财
+#    age: 10
+
+#yml方式的激活某个环境使用‘---’文档块来标注
+
+server:
+  port: 8080
+  #激活dev的配置
+#spering:
+#spring:
+#  profiles:
+#    active: dev
+---
+server:
+  port: 8081
+spring:
+  profiles: dev
+
+---
+server:
+  port: 80
+spring:
+  profiles: proud
+
+#在运行环境中的arguments中配置--spring.profiles.active=proud（表示激活proud的配置）
