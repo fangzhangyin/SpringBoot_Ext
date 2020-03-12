@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>成功</title>
+</head>
+<body>
+thymeleaf引用成功<br/>
+使用了thymeleaf从后台传来的值进行渲染：
+<div th:text="${hello}" th:id="${hello}" th:class="${hello}"><p>我是没有使用模板引擎的珍贵信息</p></div>
+<!--使用了thymeleaf模板引擎将会使div内部块的行元素无效化-->
+<!--th:里的属性为任意，可以代替div原生的内id，class等-->
+</body>
+</html>
