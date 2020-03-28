@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.min.css" />
+    <script type="text/javascript" src="js/jquery.js" ></script>
+    <script type="text/javascript" src="bootstrap-3.3.7-dist/js/bootstrap.min.js" ></script>
+    <link rel="stylesheet" href="css/mine.css" />
+</head>
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation"> <!--描述：顶部黑色导航栏-->
+    <div class="container">
+        <div class="navbar-header">
+            <a href="#" class="navbar-brand">首页</a>
+
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li class="col-sm-3"><a href="">管理员</a></li>
+                <li class="col-sm-3"><a href="">物料查看</a></li>
+                <li class="col-sm-3"><a href="lend">员工登陆</a></li>
+                <li class="col-sm-3"><a href="">员工注册</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div id="slidershow" class="carousel slide"
+     data-ride="carousel" data-interval = 2000 data-pause = "hover" data-wrap="true">
+    <ol class="carousel-indicators">
+        <li class="active" data-target="#slidershow" data-slide-to="0" ></li>
+        <li data-target="#slidershow" data-slide-to="1"></li>
+        <li data-target="#slidershow" data-slide-to="2"></li>
+    </ol>
+    <!-- 轮播（Carousel）项目 -->
+    <div class="carousel-inner">
+        <div class="item active">
+            <a href="##"><img src="img/shorts/0.jpg" ></a>
+            <div class="carousel-caption">
+                <h1>春季款</h1>
+                <p>春季的不二选择</p>
+            </div>
+        </div>
+        <div class="item">
+            <a href="##"><img src="img/shorts/1.jpg" ></a>
+            <div class="carousel-caption">
+                <h1>冬季款</h1>
+                <p >这个冬季有点暖</p>
+            </div>
+        </div>
+        <div class="item">
+            <a href="##"><img src="img/shorts/2.jpg" ></a>
+            <div class="carousel-caption">
+                <h1>暴热款</h1>
+                <p>销量最火爆的产品</p>
+            </div>
+        </div>
+    </div>
+    <a class="left carousel-control" href="#slidershow" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+    </a>
+    <a class="right carousel-control" href="#slidershow" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+    </a>
+</div>
+<div  class="tag-line" >
+    <div class="container">
+        <div class="row  text-center" >
+
+            <div class="col-lg-12  col-md-12 col-sm-12">
+
+                <h2 data-scroll-reveal="enter from the bottom after 0.1s" ><i class="fa fa-circle-o-notch"></i>
+                    欢迎使用物料管理系统
+                    <i class="fa fa-circle-o-notch"></i> </h2>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="warning">
+    <h1 class="lead" style="text-align: center;font-size: 2.5em;">系统带来的便利</h1>
+</div>
+<p>
+    仓储在企业的整个供应链中起着至关重要的作用，如果不能保证正确的进货和库存控制及发货，将会导致管理费用的增加，服务质量难以得到保证，从而影响企业的竞争力。传统简单、静态的仓储管理已无法保证企业各种资源的高效利用。如今的仓库作业和库存控制作业已十分复杂化多样化，仅靠人工记忆和手工录入，不但费时费力，而且容易出错，给企业带来巨大损失。
+    本系统可以帮助物料管理者方便的管理和运营，使得物料不浪费，物料补给及时，物料来去动向明确等优点
+    降低管理复杂度，减少产品开发成本。
+</p>
+<br />
+
+<div class="warning" id="aa">
+    <h1 class="lead" style="text-align: center;font-size: 2.5em;">物料一览</h1>
+</div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-3"><img src="img/box/10.jpg" style="width: 350px;height: 300px;">包装盒</div>
+        <div class="col-sm-3"><img src="img/bu/00.jpg" style="width: 350px;height: 300px;">布料</div>
+        <div class="col-sm-3"><img src="img/jiao/20.jpg" style="width: 350px;height: 300px;">胶料</div>
+        <div class="col-sm-3"><img src="img/xian/30.jpg" style="width: 350px;height: 300px;">线头</div>
+    </div>
+</div>
+
+<div class="contact" id="contact">
+    <div class="container">
+        <h3>您的建议</h3>
+        <div class="contact-info">
+            <div class="col-md-8 contact-grids">
+                <form action="#" >
+                    <input type="text" value="昵称" name="name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Name';}" required="">
+                    <input type="text" value="邮箱" name="email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}" required="">
+
+                    <textarea onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '写下您的感受，建议等';}" required="">写下您的感受，建议等</textarea>
+                    <input type="submit" value="提交">
+                </form>
+            </div>
+            <div class="col-md-4 contact-grids agileinfo">
+                <p>在这里您可以畅所欲言，我们将会对着些建议信息进行提取，完善和健全功能，以达到您的要求</p>
+
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+
+    <div id="footer">
+        <a target="_blank" href="#">联系我们</a>
+    </div>
+</div>
+</body>
+</html>

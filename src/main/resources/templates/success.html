@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <title>成功</title>
@@ -10,5 +10,9 @@ thymeleaf引用成功<br/>
 <div th:text="${hello}" th:id="${hello}" th:class="${hello}"><p>我是没有使用模板引擎的珍贵信息</p></div>
 <!--使用了thymeleaf模板引擎将会使div内部块的行元素无效化-->
 <!--th:里的属性为任意，可以代替div原生的内id，class等-->
+<div th:text="#{test.trans1}">
+</div>
+<a th:href="@{/self(l='zh_CN')}">中文</a>
+<a th:href="@{/self(l='en_US')}">English</a>
 </body>
 </html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>文件上传和下载</title>
+    <script type="text/javascript" src="js/jquery.js"></script>
+</head>
+<body>
+<div>
+
+    <form action="upfile1" method="post" enctype="multipart/form-data">
+        <p>表单形式的上传文件</p>
+        <label>单文件上传</label>
+        <input name="file" type="file">
+        <textarea name="text"></textarea>
+        <input type="submit" value="上传">
+    </form>
+    <form action="upfile2" method="post" enctype="multipart/form-data">
+        <label>多文件上传</label>
+<!--        设置multiple表示文件可以多选-->
+        <input type="file" name="file1" multiple>
+        <input type="file" name="file2">
+        <input type="text" name="flag" value="" placeholder="上传标记">
+        <input type="submit" value="上传">
+    </form>
+</div>
+<div>
+    <p>ajax的文件上传</p>
+    <input type="file" id="afile">
+    <input type="text" id="tt" placeholder="说明">
+    <button id="btn" onclick="oncbtn()">上传</button>
+</div>
+<div>
+    <p>文件的下载</p>
+    <a href="downfile">点击下载</a>
+</div>
+<div>
+    <p>访问本地文件</p>
+    <img src="#" style="width: 100px;height: 100px" id="img">
+    <button onclick="getimg()">获取服务器端图片</button>
+</div>
+<script type="text/javascript">
+function oncbtn() {
+    var formData = new FormData();
+    formData.append("file",$('#afile')[0].files[0]);
+    formData.append("tt",$('#tt').val());
+    $.ajax({
+        url:'/upfile3',
+        // dataType:'json',
+        type:'POST',
+        async: false,
+        data: formData,
+        processData : false, // 使数据不做处理
+        contentType : false, // 不要设置Content-Type请求头
+        success: function(data){
+            console.log(data);
+            if (data.text == 'ok') {
+                alert('上传成功！');
+            }
+        },
+        error:function(response){
+            console.log(response);
+        }
+    });
+}
+function getimg() {
+    $('#img').attr('src', 'Spring?filename=123.png');
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>错误页面4xx</title>
+</head>
+<body>
+这是自定义的4xx错误页面
+<!--该错误页面如果不存在，就会使用springboot默认的错误页面，错误页面一般定义在静态资源文件夹下的4xx或者5xx.html,这里配置在templates下可以用模板引擎获得状态码和一些错误信息-->
+<h1>状态码：[[${status}]]</h1>
+<h1>时间戳：[[${timestamp}]]</h1>
+<h1>时间戳：[[${error}]]</h1>
+<h1>时间戳：[[${exception}]]</h1>
+<h1>时间戳：[[${message}]]</h1>
+<h1>自定义：[[${person}]]</h1>
+<!--<h1>自定义的扩展信息：[[${ext.code}]]</h1>-->
+<!--<h1>自定义的扩展信息：[[${ext.message}]]</h1>-->
+</body>
+</html>

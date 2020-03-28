@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+    <link rel="stylesheet" href="css/lend.css" />
+</head>
+
+<body>
+<div class="full">
+
+    <div class="lend">
+        <form action="lendin" method="post" onsubmit="return checked();">
+            <h1>成员登陆</h1>
+<!--            使用thymeleaf进行类似于jsp的${}操作-->
+            <p style="color: red" th:text="${error}" th:if="${error} ne null"></p>
+            <table>
+                <tr>
+                    <td >用户名：</td>
+                    <td><input id="username" name="username" value=""/></td>
+                </tr>
+
+                <tr>
+                    <td >密码：</td>
+                    <td><input type="password" name="password" value=""/></td>
+                </tr>
+
+            </table>
+            <br/>
+            <input type="checkbox" value="remember"  name="remember"/>记住密码
+            <input type="checkbox" value="autolend" name="autolend"/>自动登陆
+            <br />
+            <input type="submit" value="登陆" />
+            <input type="reset" value="重置" />
+        </form>
+    </div>
+</div>
+<script type="text/javascript">
+    var a=document.getElementById("username");
+    function checked(){
+        if(a.value==""){
+            alert('用户名不能为空');
+            return false;
+        }
+    }
+</script>
+</body>
+</html>
